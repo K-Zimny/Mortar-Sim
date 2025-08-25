@@ -1,0 +1,114 @@
+body {
+  background: tan;
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.body-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.75;
+  background: url("/desert.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  font-size: 2rem;
+  text-decoration: bold;
+  background: #b29c7bac;
+}
+
+.score {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+  font-size: 5rem;
+  text-decoration: bold;
+}
+
+.game-container {
+  background: c1a886;
+  width: 100%;
+  height: 90dvh;
+  display: block;
+  position: relative;
+}
+
+.mortar-foe {
+  width: 40px;
+  height: 40px;
+  background: red;
+  display: block;
+}
+
+.mortar-player {
+  width: 100px;
+  height: 100px;
+  background: url("/mortar.svg");
+  background-position: center;
+  background-size: cover;
+  display: block;
+}
+
+.projectile {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background: black;
+  position: absolute;
+  display: block;
+}
+
+/* Explosion look for the detonation */
+.projectile.detonate {
+  background: #755525; /* your brown */
+  width: 90px;
+  height: 90px;
+  border-radius: 50%; /* round puff */
+  animation: detonate-explosion 30s ease-out forwards;
+  /* optional glow to sell the blast */
+  box-shadow: 0 0 12px 4px rgba(255, 0, 0, 0.75),
+    0 0 36px 16px rgba(255, 140, 0, 0.45);
+}
+
+/* Red -> Brown quickly, then slowly to a light brown over the rest of the 10s */
+@keyframes detonate-explosion {
+  /* Instant ignition */
+  0% {
+    /* transform: scale(0.2); */
+    background: #ff0000; /* red flash */
+    box-shadow: 0 0 12px 4px rgba(255, 0, 0, 0.75);
+    opacity: 1;
+  }
+
+  /* Snap to your brown early */
+  10% {
+    /* transform: scale(2.4); */
+    background: #755525; /* your brown */
+  }
+
+  /* Gentle settle after the shock */
+  30% {
+    /* transform: scale(1.6); */
+    box-shadow: 0 0 16px 16px #442c07ff;
+  }
+
+  /* Long, slow fade to a lighter brown through the remainder */
+  100% {
+    /* transform: scale(1); */
+    background: #503308ff; /* light version of #755525 */
+    opacity: 0.25; /* faint smoke at the end */
+    box-shadow: 0 0 12px 12px #442c07ff;
+  }
+}

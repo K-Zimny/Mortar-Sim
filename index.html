@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortar Sim</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="body-bg"></div>
+    <div class="controls" hidden>
+      <label for="salvo">Salvo</label>
+      <input id="salvo" type="number" placeholder="1" value="1" />
+
+      <label for="angle">Angle</label>
+      <input
+        id="angle"
+        type="number"
+        placeholder="1000"
+        value="1000"
+        step="100"
+      />
+
+      <label for="deflection">Deflection</label>
+      <input
+        id="deflection"
+        type="number"
+        placeholder="500"
+        value="500"
+        step="100"
+      />
+    </div>
+    <div class="info">
+      <h1>Mortar Sim</h1>
+      <p>Destroy the Target - Good Luck!</p>
+      <br />
+      <p>Hold the Up and Down Arrow Keys for Distance.</p>
+      <p>Hold the Left and Right Arrow Keys for Direction.</p>
+      <p>Use the Space Bar to fire a projectile.</p>
+    </div>
+    <div class="score">00</div>
+
+    <div class="game-container"></div>
+  </body>
+</html>
