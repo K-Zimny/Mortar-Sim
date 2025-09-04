@@ -6,11 +6,11 @@
     <title>Mortar Sim</title>
 
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./main.js" defer></script>
+    <script type="module" src="./main.js" defer></script>
   </head>
   <body>
     <div class="body-bg"></div>
-    <div class="controls" hidden>
+    <div class="controls">
       <label for="salvo">Salvo</label>
       <input id="salvo" type="number" placeholder="1" value="1" />
 
@@ -42,6 +42,6 @@
     </div>
     <div class="score">00</div>
 
-    <div class="game-container"></div>
+    <div id="app"></div>
   </body>
 </html>
