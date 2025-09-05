@@ -71,7 +71,7 @@ class Projectile {
    */
   fire() {
     // Play launch sound
-    playAudio("/assets/fire.m4a");
+    playAudio("/public/fire.m4a");
 
     // Track traveled distance
     let xDistanceTraveled = 0;
@@ -113,7 +113,7 @@ class Projectile {
    */
   detonate() {
     this.element.classList.add("detonate");
-    playAudio("/assets/explosion.m4a");
+    playAudio("/public/explosion.m4a");
     setTimeout(() => {
       // Remove projectile for performance
       this.element.remove();
