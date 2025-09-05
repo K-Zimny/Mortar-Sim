@@ -12,7 +12,7 @@ body {
   inset: 0;
   z-index: -1;
   opacity: 0.75;
-  background: url("/public/desert.jpg");
+  background: url("public/desert.jpg");
   background-position: center;
   background-size: cover;
   overflow: hidden;
@@ -65,7 +65,7 @@ body {
 .mortar {
   width: 100px;
   height: 100px;
-  background: url("/public/mortar.svg");
+  background: url("public/mortar.svg");
   background-position: center;
   background-size: cover;
   display: block;

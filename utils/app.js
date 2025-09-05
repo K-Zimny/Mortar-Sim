@@ -105,7 +105,7 @@ const app = {
     document.addEventListener(
       "keydown",
       () => {
-        playAudio("/public/theme.m4a", { loop: false });
+        playAudio("public/theme.m4a", { loop: false });
       },
       { once: true }
     );
