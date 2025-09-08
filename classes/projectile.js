@@ -1,4 +1,5 @@
 import playAudio from "../utils/audio.js";
+import addElement from "../utils/element.js";
 
 /**
  * A Projectile represents a fired object in the game.
@@ -31,11 +32,11 @@ class Projectile {
     eY = 10,
     s = 10,
   } = {}) {
-    // Create and Append Projectile
-    /** @type {HTMLDivElement} */
-    this.element = document.createElement("div");
-    this.element.classList.add("projectile");
-    app.element.appendChild(this.element);
+    this.element = addElement({
+      sX: sX,
+      sY: sY,
+      className: "projectile",
+    });
 
     // Measure Projectile
     const rect = this.element.getBoundingClientRect();
@@ -49,7 +50,7 @@ class Projectile {
     this.startingX = sX;
     /** @type {number} */
     this.startingY = sY;
-    this.element.style.transform = `translate(${this.startingX}px,${this.startingY}px)`;
+    // this.element.style.transform = `translate(${this.startingX}px,${this.startingY}px)`;
 
     // Set ending position
     /** @type {number} */
